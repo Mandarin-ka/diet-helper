@@ -1,0 +1,24 @@
+.sp {
+  font-size: 18px;
+}
+
+.product {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.product th {
+  font-weight: bold;
+  padding: 5px;
+  font-size: 20px;
+  background: #efefef;
+  border: 1px solid #dddddd;
+}
+
+.product td {
+  font-size: 16px;
+  border: 1px solid #dddddd;
+  padding: 5px;
+  text-align: center;
+  width: 20%;
+}
