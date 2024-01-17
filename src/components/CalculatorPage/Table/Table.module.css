@@ -1,0 +1,22 @@
+.table {
+  max-width: 600px;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #00000033;
+}
+
+.table__head,
+.table__div {
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.table__head {
+  border-top: 0;
+}
+
+.table__div {
+  border-bottom: 0;
+}
