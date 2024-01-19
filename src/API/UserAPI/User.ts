@@ -27,7 +27,7 @@ class User implements UserI {
     this.lifestyle = lifestyle;
   }
 
-  idealUser() {
+  getIdealUserMeal() {
     const parametres = {
       calories: 0,
       proteins: 0,
@@ -99,4 +99,10 @@ class User implements UserI {
 
     return parametres;
   }
+
+  getIMT() {
+    return this.weight / ((this.height * this.height) / 10000);
+  }
 }
+
+export default User;
