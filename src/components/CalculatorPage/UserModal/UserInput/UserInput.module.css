@@ -1,0 +1,18 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.label {
+  font-size: 18px;
+}
+
+.input:active {
+  outline: none;
+}
+
+.input:focus {
+  outline: none;
+}

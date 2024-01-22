@@ -1,0 +1,25 @@
+.modal {
+  background-color: bisque;
+  width: 40vw;
+  margin: 0 auto;
+  top: 12%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 25px 30px;
+  border-radius: 20px;
+  position: fixed;
+  height: fit-content;
+}
+
+.form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: stretch;
+}
+
+.modal * {
+  margin: 5px 0;
+}
