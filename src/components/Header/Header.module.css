@@ -1,0 +1,18 @@
+.nav__ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 200px;
+  list-style-type: none;
+}
+
+.nav__ul > * > * {
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+  transition: 0.1s;
+}
+
+.nav__ul > * > *:hover {
+  color: goldenrod;
+}

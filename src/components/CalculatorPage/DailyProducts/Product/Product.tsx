@@ -1,20 +1,16 @@
 import React from 'react';
+import { IFood } from './../../../../API/ProductsAPI/ProductsAPI';
 import cl from './Product.module.css';
 
 interface Props {
-  name: string;
-  calories: number;
-  proteins: number;
-  fats: number;
-  carbohydrates: number;
-  weight: number;
+  product: IFood;
 }
 
 function Product(props: Props) {
   return (
     <table className={cl.product}>
       <tr>
-        <th colSpan={5}>{props.name[0].toUpperCase() + props.name.slice(1)}</th>
+        <th colSpan={5}>{props.product.name[0].toUpperCase() + props.product.name.slice(1)}</th>
       </tr>
       <tr>
         <td>Вес</td>
@@ -24,11 +20,11 @@ function Product(props: Props) {
         <td>Углеводы</td>
       </tr>
       <tr>
-        <td>{props.weight}</td>
-        <td>{props.calories}</td>
-        <td>{props.proteins}</td>
-        <td>{props.fats}</td>
-        <td>{props.carbohydrates}</td>
+        <td>{props.product.weight}</td>
+        <td>{props.product.calories}</td>
+        <td>{props.product.proteins}</td>
+        <td>{props.product.fats}</td>
+        <td>{props.product.carbohydrates}</td>
       </tr>
     </table>
   );

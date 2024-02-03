@@ -24,8 +24,9 @@ function Table(props: Props) {
         <th className={cl.table__head}>Калории</th>
         <th className={cl.table__head}>Белки</th>
         <th className={cl.table__head}>Жиры</th>
+        <th className={cl.table__head}>Углеводы</th>
         <th className={cl.table__head} style={{ border: 0 }}>
-          Углеводы
+          Вес
         </th>
       </tr>
       <tr className={cl.table__row}>
@@ -79,6 +80,16 @@ function Table(props: Props) {
           )}>
           {props.carbohydrates}
         </td>
+        <td
+          className={cl.table__div}
+          style={{
+            border: 0,
+            borderTop: '1px solid black',
+            borderBottom: '1px solid black',
+            borderLeft: '1px solid black',
+          }}>
+          {props.weight}
+        </td>
       </tr>
       {props.weight && (
         <tr className={cl.table__row}>
@@ -88,7 +99,7 @@ function Table(props: Props) {
           <td className={cl.table__div}>{normal.calories}</td>
           <td className={cl.table__div}>{normal.proteins}</td>
           <td className={cl.table__div}>{normal.fats}</td>
-          <td className={cl.table__div} style={{ border: 0 }}>
+          <td className={cl.table__div} style={{ borderRight: '1px solid black' }}>
             {normal.carbohydrates}
           </td>
         </tr>

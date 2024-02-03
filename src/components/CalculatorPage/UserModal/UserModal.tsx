@@ -4,6 +4,7 @@ import cl from './UserModal.module.css';
 import ApplyButton from './../../UI/ApplyButton/ApplyButton';
 import { UserI } from '../../../API/UserAPI/UserI';
 import { setUserToLS } from './../../../Utils/UserStorage';
+import TextInput from './../../../components/UI/TextInput/TextInput';
 
 function UserModal() {
   const id = useId();
@@ -17,8 +18,8 @@ function UserModal() {
     lifestyle: 1.2,
   });
 
-  const ruLabels = ['Имя', 'Возраст', 'Пол', 'Вес', 'Рост', 'Цель', 'Стиль жизни'];
-  const engLabels = ['name', 'age', 'sex', 'weight', 'height', 'gain', 'lifestyle'];
+  const ruLabels = ['Возраст', 'Пол', 'Вес', 'Рост', 'Цель', 'Стиль жизни'];
+  const engLabels = ['age', 'sex', 'weight', 'height', 'gain', 'lifestyle'];
 
   function click() {
     setUserToLS(user);
@@ -27,6 +28,7 @@ function UserModal() {
   return (
     <div className={cl.modal}>
       <form action='' className={cl.form} id={id}>
+        <TextInput name={'Имя'} placeholder='Иван' user={user} setUser={setUser} />
         {ruLabels.map((e, i) => (
           <UserInput label={e} key={i} keyN={engLabels[i]} user={user} setUser={setUser} />
         ))}
